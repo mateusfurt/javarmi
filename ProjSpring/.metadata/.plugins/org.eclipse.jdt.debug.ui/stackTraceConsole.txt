@@ -1,0 +1,16 @@
+try {
+            File arquivo = new File("caminho/do/seu/arquivo.txt"); // Substitua com o caminho correto do seu arquivo
+            FileReader fr = new FileReader(arquivo);
+            BufferedReader br = new BufferedReader(fr);
+
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                System.out.println(linha); // Exibe cada linha do arquivo
+                // Aqui você pode processar a linha como necessário
+            }
+
+            br.close();
+            fr.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
