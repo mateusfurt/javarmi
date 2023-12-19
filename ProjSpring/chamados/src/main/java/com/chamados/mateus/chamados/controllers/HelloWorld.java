@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/hello")
+@RequestMapping("/tradutor")
 public class HelloWorld {
 	
 	@GetMapping
 	public String olamundo() {
 		String linha = "";
 		try {
-            File arquivo = new File("C:/Users/mateu/Documents/vscode/java/rmi/resultado.txt"); // Substitua com o caminho correto do seu arquivo
+            File arquivo = new File("C:/Users/mateu/Documents/GitHub/javarmi/rmi/resultado.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             linha = br.readLine();
