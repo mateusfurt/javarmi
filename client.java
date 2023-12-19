@@ -7,13 +7,18 @@ import java.util.Scanner;
 public class client {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite um número: ");
-        int num = scanner.nextInt();
         try {
-            
+            tradutor stub = (tradutor) Naming.lookup("rmi://localhost:1099/Ola");  
 
-            fatorial stub = (fatorial) Naming.lookup("rmi://localhost:1099/Ola");
-            System.out.println(stub.fatorar(num));
+            while(true){
+                System.out.println("Digite uma palavra: ");
+                String txt = scanner.nextLine();
+                if (txt.equals("fechar")){
+                    break;
+                }
+                System.out.println(stub.traduzir(txt));  
+            }
+            
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (RemoteException e) {
