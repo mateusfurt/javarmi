@@ -17,7 +17,7 @@ public class HelloWorld {
 	public String olamundo() {
 		String linha = "";
 		try {
-            File arquivo = new File("C:/Users/mateu/Documents/GitHub/javarmi/rmi/resultado.txt");
+            File arquivo = new File("C:/Users/Usuário/Documents/GitHub/javarmi/rmi/resultado.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             linha = br.readLine();

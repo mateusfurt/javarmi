@@ -6,7 +6,7 @@ import java.rmi.registry.Registry;
 
 public class server {
     public static void main(String[] args) throws RemoteException {
-            System.setProperty("java.rmi.server.hostname", "localhost");
+        System.setProperty("java.rmi.server.hostname", "localhost");
         Registry registry = LocateRegistry.createRegistry(1099);
         try {
             Naming.rebind("rmi://localhost:1099/Ola",new tradutorimp());
